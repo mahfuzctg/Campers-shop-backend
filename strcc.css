@@ -1,0 +1,33 @@
+/* /* 
+campers-shop-backend/ */
+├── node_modules/
+├── src/
+│   ├── config/
+│   │   └── index.ts
+│   ├── errors/
+│   │   └── appError.ts
+│   │   └── handleCastError.ts
+│   │   └── handleDuplicateError.ts
+│   │   └── handleValidationError.ts
+│   │   └── handleZodError.ts
+│   ├── middlewares/
+│   │   └── globalErrorHandler.ts
+│   │   └── notFound.ts
+│   ├── modules/
+│   │   └── products/
+│   │       ├── productController.ts
+│   │       ├── productRoute.ts
+│   │       ├── productService.ts
+│   │       ├── productInterface.ts
+│   │       ├── productModel.ts
+│   │       ├── productValidation.ts
+│   ├── routes/
+│   │   ├── index.ts
+│   ├── utils/
+│   │   ├── catchAsync.ts
+│   │   └── sendResponse.ts
+│   ├── app.ts
+│   └── server.ts
+├── package.json
+├── tsconfig.json
+└── other config files */
