@@ -1,6 +1,6 @@
 // src/controllers/productController.ts
 import { Request, Response } from "express";
-import Product from "../models/Product";
+import Product from "../models/ProductModel";
 import {
   createProductSchema,
   updateProductSchema,

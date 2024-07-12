@@ -1,8 +1,8 @@
 // src/controllers/checkoutController.ts
 import { Request, Response } from "express";
 import Cart from "../models/Cart";
-import Order from "../models/Order";
-import Product from "../models/Product";
+import Order from "../models/OrderModel";
+import Product from "../models/ProductModel";
 import { placeOrderSchema } from "../schemas/orderSchema";
 
 export const placeOrder = async (req: Request, res: Response) => {

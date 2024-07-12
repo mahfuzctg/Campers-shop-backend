@@ -1,7 +1,13 @@
 // src/schemas/orderSchema.ts
-import { z } from "zod";
+import { Schema } from "mongoose";
 
-export const placeOrderSchema = z.object({
-  shippingAddress: z.string().min(1),
-  paymentMethod: z.enum(["cash", "stripe"]),
+// Define Order Schema
+const OrderSchema = new Schema({
+  name: { type: String, required: true },
+  email: { type: String, required: true },
+  phone: { type: String, required: true },
+  address: { type: String, required: true },
+  paymentMethod: { type: String, required: true },
 });
+
+export default OrderSchema;

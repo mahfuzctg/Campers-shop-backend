@@ -1,7 +1,7 @@
 // src/controllers/cartController.ts
 import { Request, Response } from "express";
 import Cart from "../models/Cart";
-import Product from "../models/Product";
+import Product from "../models/ProductModel";
 import { addToCartSchema, updateCartSchema } from "../schemas/cartSchema";
 
 export const getCart = async (req: Request, res: Response) => {

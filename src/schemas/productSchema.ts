@@ -1,22 +1,15 @@
-import { z } from "zod";
+import { Schema } from "mongoose";
 
-export const createProductSchema = z.object({
-  name: z.string().min(1),
-  price: z.number().positive(),
-  stockQuantity: z.number().int().min(0),
-  description: z.string().min(1),
-  category: z.string().min(1),
-  ratings: z.number().min(0).max(5),
-  images: z.array(z.string()),
-  tags: z.array(z.string()).optional(),
-  variants: z
-    .array(
-      z.object({
-        type: z.string().min(1),
-        value: z.string().min(1),
-      })
-    )
-    .optional(),
+// Define Product Schema
+const ProductSchema = new Schema({
+  name: { type: String, required: true },
+  image: { type: String, required: true },
+  description: { type: String, required: true },
+  category: { type: String, required: true },
+  price: { type: Number, required: true },
+  quantity: { type: Number, required: true },
+  stock: { type: Boolean, default: true },
+  rating: { type: Number, required: true },
 });
 
-export const updateProductSchema = createProductSchema.partial();
+export default ProductSchema;
