@@ -1,4 +1,3 @@
-// src/server.ts
 import mongoose from "mongoose";
 import app from "./app";
 import config from "./config";
@@ -13,8 +12,7 @@ async function main() {
     }
 
     await mongoose.connect(config.database_url, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
+      // Note: Removed useNewUrlParser and useUnifiedTopology as they are deprecated
     });
 
     app.listen(config.port, () => {
